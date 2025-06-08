@@ -4,7 +4,7 @@ import { BACKEND_URL } from "../config";
 
 export const blogSelectorFamily = selectorFamily({
     key : "blogSelectorFamily" , 
-    get : (id :string) => async ({ get }) => {
+    get : (id :string) => async ({}) => {
         const response = axios.get(`${BACKEND_URL}/api/v1/blog${id}`,{
                 headers : {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -18,7 +18,7 @@ export const blogSelectorFamily = selectorFamily({
 
 export const nameSelectorFamily = selectorFamily({
     key : "blogSelectorFamily" , 
-    get : () => async ({get}) => {
+    get : () => async ({}) => {
         const response = axios.get(`${BACKEND_URL}/api/v1/user/details` , {
                 headers : {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`
