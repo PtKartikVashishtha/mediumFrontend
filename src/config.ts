@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://medium-app.kartik2005vashishtha.workers.dev" ;
